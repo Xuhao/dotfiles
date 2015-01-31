@@ -104,9 +104,9 @@ else
 fi;
 
 # Set the terminal title to the current working directory.
-PS1="$(tput setaf 136)\w$(tput sgr0)";
-PS1+="$(tput setaf 33)\$(prompt_git \"${white} on ${violet}\")$(tput sgr0)"; # Git repository details
-PS1+="$ ";
+PS1="\[${green}\]\w";
+PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
+PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
