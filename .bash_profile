@@ -49,5 +49,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# Add `$PWD/node_modules/.bin` to the `$PATH`, good for node developer
+export PATH="./node_modules/.bin:$PATH";
+
 # Add `$PWD/bin` to the `$PATH`, good for ruby on rails developer
 export PATH="./bin:$PATH";
