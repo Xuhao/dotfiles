@@ -78,7 +78,8 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
-
+	
+	co = checkout
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -125,17 +126,6 @@
 	frag = magenta bold # line info
 	old = red # deletions
 	new = green # additions
-
-[color "status"]
-
-	added = yellow
-	changed = green
-	untracked = cyan
-
-[commit]
-
-	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
 
 [diff]
 
@@ -185,3 +175,6 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[credential]
+ 	helper = osxkeychain

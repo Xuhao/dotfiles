@@ -1,6 +1,12 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+# Add `$PWD/node_modules/.bin` to the `$PATH`, good for node developer
+export PATH="./node_modules/.bin:$PATH";
+
+# Add `$PWD/bin` to the `$PATH`, good for ruby on rails developer
+export PATH="./bin:$PATH";
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
